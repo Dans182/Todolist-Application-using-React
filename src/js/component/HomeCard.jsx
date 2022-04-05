@@ -1,22 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 
-const HomeCard = (props) => {
+const HomeCard = () => {
+	const [task, setTask] = useState("");
+
 	return (
 		<form>
-			<div className="mb-3 mt-5 w-25 mx-auto ">
-				<label form="exampleInputEmail1" className="form-label mx-auto">
-					Todo List
-				</label>
-				<input
-					type="Task"
-					className="form-control"
-					id="exampleInputEmail1"
-					aria-describedby="emailHelp"
-					placeholder="Agrega una tarea"
-				/>
-				<div id="emailHelp" className="form-text">
-					We'll never share your email with anyone else.
+			<div className="back bg-light mx-auto w-75">
+				<div className="mb-3 w-50 mx-auto mt-4">
+					<label htmlFor="exampleInputEmail1" className="form-label">
+						To Do List
+					</label>
+					<input
+						type="Task"
+						className="form-control"
+						id="Input-Task"
+						aria-describedby="emailHelp"
+						placeholder="Agrega una tarea"
+						defaultValue={task}
+						onKeyPress={(e) => {
+							if (e.key === "enter") {
+								console.log(e.target.value);
+							}
+							setTask(e.target.value);
+						}}
+					/>
+					<div id="emailHelp" className="form-text">
+						We'll never share your email with anyone else.
+					</div>
 				</div>
 			</div>
 		</form>
