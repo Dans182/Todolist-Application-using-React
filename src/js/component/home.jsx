@@ -4,7 +4,7 @@ import HomeCard from "../component/HomeCard.jsx";
 //create your first component
 const Home = () => {
 	return (
-		<div>
+		<div className="container">
 			<HomeCard />
 		</div>
 	);

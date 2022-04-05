@@ -3,18 +3,23 @@ import PropTypes from "prop-types";
 
 const HomeCard = (props) => {
 	return (
-		<div
-			className="card text-white bg-primary mb-3"
-			style={{ maxWidth: "18rem" }}>
-			<div className="card-header">Header</div>
-			<div className="card-body">
-				<h5 className="card-title">Primary card title</h5>
-				<p className="card-text">
-					Some quick example text to build on the card title and make
-					up the bulk of the card's content.
-				</p>
+		<form>
+			<div className="mb-3 mt-5 w-25 mx-auto ">
+				<label for="exampleInputEmail1" className="form-label mx-auto">
+					Todo List
+				</label>
+				<input
+					type="Task"
+					className="form-control"
+					id="exampleInputEmail1"
+					aria-describedby="emailHelp"
+					placeholder="Agrega una tarea"
+				/>
+				<div id="emailHelp" className="form-text">
+					We'll never share your email with anyone else.
+				</div>
 			</div>
-		</div>
+		</form>
 	);
 };
 
