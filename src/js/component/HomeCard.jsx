@@ -5,7 +5,7 @@ const HomeCard = (props) => {
 	return (
 		<form>
 			<div className="mb-3 mt-5 w-25 mx-auto ">
-				<label for="exampleInputEmail1" className="form-label mx-auto">
+				<label form="exampleInputEmail1" className="form-label mx-auto">
 					Todo List
 				</label>
 				<input
