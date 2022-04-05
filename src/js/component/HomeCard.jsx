@@ -17,13 +17,18 @@ const HomeCard = () => {
 						aria-describedby="emailHelp"
 						placeholder="Agrega una tarea"
 						defaultValue={task}
+						// onChange
 						onKeyPress={(e) => {
-							if (e.key === "enter") {
+							if (e.key === "Enter") {
 								console.log(e.target.value);
 							}
 							setTask(e.target.value);
 						}}
 					/>
+					<ul>
+						<li>{task}</li>
+					</ul>
+
 					<div id="emailHelp" className="form-text">
 						We'll never share your email with anyone else.
 					</div>
