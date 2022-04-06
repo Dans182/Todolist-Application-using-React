@@ -7,11 +7,13 @@ const HomeCard = () => {
 	return (
 		<form>
 			<div
-				className="back bg-light mx-auto rounded"
+				className="bg-light mx-auto rounded"
 				style={{ width: "450px" }}>
-				<div className="mb-3 w-50 mx-auto mt-4">
-					<label htmlFor="exampleInputEmail1" className="form-label">
-						To Do List
+				<div className="mb-3 w-50 pb-2 mx-auto mt-4">
+					<label
+						htmlFor="exampleInputEmail1"
+						className="form-label mt-3">
+						<h3>To Do List</h3>
 					</label>
 					<input
 						className="form-control"
@@ -23,12 +25,18 @@ const HomeCard = () => {
 							setTask(e.target.value);
 							console.log(e.target.value);
 						}}
+						onKeyPress={(e) => {
+							if (e.key === "Enter") {
+								e.preventDefault();
+								e.stopPropagation();
+								setLista([...lista, task]);
+								setTask("");
+							}
+						}}
 					/>
-				</div>
-				<div>
 					<button
 						type="button"
-						className="btn btn-warning justify-content-center"
+						className="btn btn-warning mt-3 mb-3"
 						onClick={() => {
 							setLista([...lista, task]);
 							setTask("");
@@ -38,9 +46,11 @@ const HomeCard = () => {
 					{lista.map((ingres) => {
 						return (
 							<div
-								className="card"
-								style={{ width: "225px", height: "225px" }}>
-								<h4>{ingres}</h4>
+								className="bg-light"
+								style={{ width: "225px" }}>
+								<h4>
+									<input type="checkbox" /> {ingres}
+								</h4>
 							</div>
 						);
 					})}
