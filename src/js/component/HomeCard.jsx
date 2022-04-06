@@ -43,13 +43,21 @@ const HomeCard = () => {
 						}}>
 						Warning
 					</button>
-					{lista.map((ingres) => {
+
+					{lista.map((ingres, index) => {
 						return (
 							<div
+								key={index}
 								className="bg-light"
 								style={{ width: "225px" }}>
 								<h4>
-									<input type="checkbox" /> {ingres}
+									<input type="checkbox" /> {ingres}{" "}
+									<i
+										className="fas fa-times-circle"
+										type="button"
+										onClick={() => {
+											tb.splice(index);
+										}}></i>
 								</h4>
 							</div>
 						);
