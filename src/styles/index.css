@@ -14,3 +14,7 @@
 body{
     background-color: rgba(222, 184, 135, 0.656);
 }
+
+.strike {
+    text-decoration: line-through;
+ }

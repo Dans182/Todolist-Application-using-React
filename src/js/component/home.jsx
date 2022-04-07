@@ -1,12 +1,12 @@
 import React from "react";
-import HomeCard from "../component/HomeCard.jsx";
+import AddTask from "./AddTask.jsx";
 
 //create your first component
 
 const Home = () => {
 	return (
 		<div className="container">
-			<HomeCard />
+			<AddTask />
 		</div>
 	);
 };
