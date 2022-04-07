@@ -4,6 +4,13 @@ const AddTask = () => {
 	const [task, setTask] = useState("");
 	const [taskList, setTaskList] = useState([]);
 
+	let totalDeTareas = taskList.length;
+	if (totalDeTareas === 0) {
+		totalDeTareas = "No tasks, you have a lot of free time";
+	} else {
+		totalDeTareas = taskList.length + " " + "tasks left";
+	}
+
 	const nuevaTarea = (tarea) => {
 		setTaskList([...taskList, task]);
 	};
@@ -67,14 +74,7 @@ const AddTask = () => {
 					);
 				})}
 			</div>
-<div>
-	let totalDeTareas = taskList.length;
-	if (totalDeTareas === 0) {
-		totalDeTareas = "No tasks, you have a lot of free time";
-	} else {
-		totalDeTareas = taskList.length + " " + "tasks left";
-	}
-</div>
+			<div>{totalDeTareas}</div>
 		</div>
 	);
 	{
