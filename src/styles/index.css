@@ -18,3 +18,22 @@ body{
 .strike {
     text-decoration: line-through;
  }
+
+.almacenDeTareas:hover {
+    background-color: yellow;
+
+}
+
+.almacenDeTareas{
+    font-size: 18px;
+
+}
+
+.fas{
+    
+    text-align-last: end;
+}
+
+.boton{
+    align-items: center;
+}

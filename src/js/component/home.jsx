@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header.jsx";
 import AddTask from "./AddTask.jsx";
+import ListaTarea from "./ListaTarea.jsx";
 
 //create your first component
 
