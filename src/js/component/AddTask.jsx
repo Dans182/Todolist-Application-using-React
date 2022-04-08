@@ -42,7 +42,7 @@ const AddTask = () => {
 			<div className="text-center">
 				<button
 					type="button"
-					className="Boton btn btn-warning mt-3 mb-3"
+					className="btn btn-warning mt-3 mb-3"
 					onClick={() => {
 						// setTaskList([...taskList, task]);
 						nuevaTarea();
@@ -58,13 +58,12 @@ const AddTask = () => {
 						return (
 							<div
 								key={index}
-								className="almacenDeTareas d-flex justify-content-between"
-								style={{ width: "225px", height: "30px" }}>
-								<input type="checkbox" />
-								{tareaAlmacenada}{" "}
-								<div>
+								className="almacenDeTareas d-flex justify-content-between rounded"
+								style={{ width: "235px", height: "35px" }}>
+								<div className="tareaX">{tareaAlmacenada} </div>
+								<div className="tareaX">
 									<i
-										className="fas fa-times-circle"
+										className="fas fa-times-circle mr-5"
 										type="button"
 										onClick={() => {
 											eliminarTarea(index);
@@ -74,9 +73,9 @@ const AddTask = () => {
 						);
 					})}
 				</div>
-				<div>
+				<div className="text-center">
 					{totalDeTareas === 0
-						? "No tasks, you have a lot of free time"
+						? "You have a lot of free time"
 						: taskList.length + " " + "tasks left"}
 				</div>
 			</div>
