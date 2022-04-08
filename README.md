@@ -1,3 +1,10 @@
+El presente proyecto consistió en la elaboración de un Todo list realizado haciendo uso de React.
+
+De esta manera, debíamos efectuar el proyecto con bootstrap y armando todo en componentes de React.
+
+Las tareas consisitian en elaborar un campo que permitiera escribir tareas y reflejarlas, así como en la lista generada, al pasar el mouse sobre esta, pudieramos eliminar la tarea de nuestra preferencia.
+
+
 # Hello World with React boilerplate
 <p>
   <a href="https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git"><img src="https://raw.githubusercontent.com/4GeeksAcademy/react-hello/master/open-in-gitpod.svg?sanitize=true" />
