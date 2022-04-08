@@ -20,14 +20,40 @@ body{
  }
 
 .almacenDeTareas:hover {
-    background-color: yellow;
+    background-image: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);
+    
+}
+
+.almacenDeTareas.clicked {
+	color: gray;
+	text-decoration: line-through;
 }
 
 .almacenDeTareas{
     font-size: 18px;
+
+}
+
+.block {
+    background-image: radial-gradient(circle at 50% -20.71%, #cbe7e1 0, #cae7e3 6.25%, #c9e7e6 12.5%, #c9e7e8 18.75%, #c9e7eb 25%, #c9e7ed 31.25%, #cae6ef 37.5%, #cbe6f1 43.75%, #cde5f2 50%, #cfe4f3 56.25%, #d1e4f4 62.5%, #d4e3f5 68.75%, #d7e2f5 75%, #dae1f5 81.25%, #dde0f4 87.5%, #e0e0f4 93.75%, #e3dff2 100%);
 }
 
 .tareaX{
     padding-left: 3px;
     padding-right: 3px
+}
+
+.almacenDeTareas:hover .fas {
+	opacity: 1;
+	width: 40px;
+}
+
+.fas {
+	height: 35px;
+	width: 0;
+	margin-left: -10px;
+	text-align: center;
+	display: inline-block;
+	opacity: 0;
+	transition: 0.2s linear;
 }

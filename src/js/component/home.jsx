@@ -8,7 +8,7 @@ const Home = () => {
 	return (
 		<div className="container">
 			<div
-				className="bg-light mx-auto rounded"
+				className="block bg-light mx-auto rounded"
 				style={{ width: "450px" }}>
 				<div className="mb-3 w-50 pb-2 mx-auto mt-4">
 					<Header />
