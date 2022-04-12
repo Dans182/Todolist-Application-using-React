@@ -7,8 +7,13 @@ const AddTask = () => {
 	let totalDeTareas = taskList.length;
 
 	const nuevaTarea = () => {
-		if (task !== "") {
+		const labels = taskList.map((task) => task);
+		const newTaskLabel = task.trim();
+		if (newTaskLabel != "" && !labels.includes(newTaskLabel)) {
 			setTaskList([...taskList, task]);
+			setTask("");
+		} else {
+			alert("No se puede ingresar esta tarea");
 		}
 	};
 
